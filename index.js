@@ -22,14 +22,17 @@
 
 
 // Save number to variable
-var input = document.getElementById("input-el").textContent
 var lengthEl = document.getElementById("length-el")
 var volumeEl = document.getElementById("volume-el")
 var massEl = document.getElementById("mass-el")
 
+document.getElementById("input-el").addEventListener("input", convert);
+
 // convert function
 function convert() {
     // conversions
+    input = document.getElementById("input-el").value
+
     feet = input * 3.280839895
     rfeet = feet.toFixed(3);
 
